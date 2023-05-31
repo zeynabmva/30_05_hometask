@@ -1,8 +1,12 @@
-<h1>Product List</h1>
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>Product List</h1>
 <ul>
     {% for product in products %}
     <li>
-        {{product.name}} -- {{product.total_price}}
+        <a href="{% url 'products:detail' product.id %}">{{product.name}} </a>
+        -- {{product.total_price}}
         <br>
         {% if product.description %}
            {{product.description}}
@@ -12,3 +16,25 @@
     </li>
     {% endfor %}
 </ul>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -24,3 +24,8 @@ def product_detail_view(request ,id):
         "product" :product
     }
     return render(request , "products/detail.html" , context)
+
+
+def created_view(request):
+    
+    return render(request , "products/create.html" )

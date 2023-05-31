@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+ <h1>Product Create</h1>
+
+
+ <div id="form-main">
+    <div id="form-div">
+      <form class="form" id="form1">
+        
+        <p class="name">
+          <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Product Name" id="name" />
+        </p>
+        
+        <p class="email">
+          <input name="email" type="number" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Product Price" />
+        </p>
+        
+        <p class="text">
+          <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Description"></textarea>
+        </p>
+        
+        
+        <div class="submit">
+          <input type="submit" value="SUBMIT" id="button-blue"/>
+          <div class="ease"></div>
+        </div>
+      </form>
+    </div>
+
+{% endblock %}
