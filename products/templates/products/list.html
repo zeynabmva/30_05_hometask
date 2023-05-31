@@ -1,0 +1,14 @@
+<h1>Product List</h1>
+<ul>
+    {% for product in products %}
+    <li>
+        {{product.name}} -- {{product.total_price}}
+        <br>
+        {% if product.description %}
+           {{product.description}}
+           {% else %}
+           No description
+           {% endif %}
+    </li>
+    {% endfor %}
+</ul>
